@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notes_add.presentation.NotesAddFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tvNoteTitleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_marginStart"
+        android:layout_marginTop="@dimen/default_marginTop"
+        android:text="@string/enter_note_title"
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_goneMarginStart="@dimen/default_marginStart" />
+
+    <EditText
+        android:id="@+id/edtNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_marginStart"
+        android:layout_marginTop="@dimen/small_marginTop"
+        android:layout_marginEnd="@dimen/default_marginEnd"
+        android:hint="@string/note_title"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNoteTitleInfo" />
+
+    <TextView
+        android:id="@+id/tvNoteDescInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_marginStart"
+        android:layout_marginTop="@dimen/default_marginTop"
+        android:text="@string/enter_note_description"
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtNoteTitle"
+        app:layout_goneMarginStart="@dimen/default_marginStart" />
+
+    <EditText
+        android:id="@+id/edtNoteDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_marginStart"
+        android:layout_marginTop="@dimen/small_marginTop"
+        android:layout_marginEnd="@dimen/default_marginEnd"
+        android:hint="@string/note_description"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNoteDescInfo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_marginStart"
+        android:layout_marginTop="@dimen/default_marginTop"
+        android:layout_marginEnd="@dimen/default_marginEnd"
+        android:background="@drawable/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtNoteDesc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

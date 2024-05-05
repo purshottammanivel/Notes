@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesHomeFragment">
+
+    <fragment
+        android:id="@+id/notesHomeFragment"
+        android:name="com.purshottam.notes.notes_home.presentation.NotesHomeFragment"
+        android:label="fragment_notes_home"
+        tools:layout="@layout/fragment_notes_home">
+        <action
+            android:id="@+id/action_notesHomeFragment_to_notesAddFragment"
+            app:destination="@id/notesAddFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notesAddFragment"
+        android:name="com.purshottam.notes.notes_add.presentation.NotesAddFragment"
+        android:label="fragment_notes_add"
+        tools:layout="@layout/fragment_notes_add" />
+
+</navigation>
